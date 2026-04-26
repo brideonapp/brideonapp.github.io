@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KVKK Aydınlatma Metni — Brideon</title>
+  <meta name="description" content="Brideon KVKK kapsamında kişisel veri işleme aydınlatma metni." />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cream: #FAF5EE; --warm-white: #FDF4EE;
+      --rose-gold: #C9847A; --rose-gold-light: #DFB0AA;
+      --dark-mocha: #2E1E18; --text-body: #374151; --text-muted: #9CA3AF;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--cream); color: var(--text-body); }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,245,238,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,132,122,0.15);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; text-decoration: none;
+      background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .nav-back {
+      font-size: 14px; font-weight: 500; color: var(--text-muted);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 8px; transition: all 0.2s;
+    }
+    .nav-back:hover { color: var(--rose-gold); background: rgba(201,132,122,0.08); }
+
+    .page-hero {
+      background: linear-gradient(160deg, #fff, var(--warm-white));
+      padding: 64px 24px 48px; text-align: center;
+      border-bottom: 1px solid rgba(201,132,122,0.1);
+    }
+    .page-tag {
+      display: inline-block;
+      background: rgba(201,132,122,0.1); color: var(--rose-gold);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; color: var(--dark-mocha); margin-bottom: 10px; }
+    .page-hero p { font-size: 15px; color: var(--text-muted); }
+
+    .content { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .toc {
+      background: #fff; border-radius: 16px;
+      border: 1px solid rgba(201,132,122,0.12);
+      padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h3 { font-size: 13px; font-weight: 700; color: var(--dark-mocha); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { font-size: 14px; color: var(--rose-gold); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    .prose section { margin-bottom: 48px; }
+    .prose h2 {
+      font-size: 22px; font-weight: 700; color: var(--dark-mocha);
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid rgba(201,132,122,0.15);
+      scroll-margin-top: 80px;
+    }
+    .prose h3 { font-size: 16px; font-weight: 700; color: var(--dark-mocha); margin: 20px 0 8px; }
+    .prose p { font-size: 15px; line-height: 1.75; color: var(--text-body); margin-bottom: 14px; }
+    .prose ul, .prose ol { padding-left: 20px; margin-bottom: 14px; }
+    .prose li { font-size: 15px; line-height: 1.75; color: var(--text-body); margin-bottom: 6px; }
+    .prose a { color: var(--rose-gold); }
+    .info-box {
+      background: rgba(201,132,122,0.07);
+      border-left: 3px solid var(--rose-gold);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px; margin: 20px 0;
+      font-size: 14px; color: var(--dark-mocha); line-height: 1.6;
+    }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 14px; }
+    .data-table th {
+      background: rgba(201,132,122,0.1); color: var(--dark-mocha);
+      font-weight: 700; padding: 10px 14px; text-align: left;
+      border: 1px solid rgba(201,132,122,0.15);
+    }
+    .data-table td {
+      padding: 10px 14px; border: 1px solid rgba(201,132,122,0.1);
+      vertical-align: top; line-height: 1.5;
+    }
+    .data-table tr:nth-child(even) td { background: rgba(250,245,238,0.5); }
+
+    footer { background: #1C1410; padding: 32px 24px; text-align: center; }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px; font-size: 13px; }
+    footer a:hover { color: #DFB0AA; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Brideon</a>
+  <a href="index.html" class="nav-back">← Ana Sayfa</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">KVKK</span>
+  <h1>Kişisel Verilerin Korunması Kanunu<br>Aydınlatma Metni</h1>
+  <p>Son güncelleme: 26 Nisan 2024 · 6698 sayılı KVKK kapsamında hazırlanmıştır.</p>
+</div>
+
+<div class="content">
+  <div class="toc">
+    <h3>İçindekiler</h3>
+    <ol>
+      <li><a href="#veri-sorumlusu">Veri Sorumlusu</a></li>
+      <li><a href="#islenen-veriler">İşlenen Kişisel Veriler</a></li>
+      <li><a href="#isleme-amaci">İşleme Amacı ve Hukuki Sebep</a></li>
+      <li><a href="#aktarim">Verilerin Aktarıldığı Taraflar</a></li>
+      <li><a href="#toplama-yontemi">Toplama Yöntemi</a></li>
+      <li><a href="#saklama">Saklama Süresi</a></li>
+      <li><a href="#haklariniz">İlgili Kişi Hakları</a></li>
+      <li><a href="#basvuru">Başvuru Yolu</a></li>
+    </ol>
+  </div>
+
+  <div class="prose">
+    <section>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında hazırlanan bu Aydınlatma Metni, Brideon mobil uygulaması aracılığıyla toplanan kişisel verilerinizin nasıl işlendiğini açıklamaktadır.</p>
+    </section>
+
+    <section id="veri-sorumlusu">
+      <h2>1. Veri Sorumlusu</h2>
+      <p>Brideon uygulaması ("uygulama") kapsamında kişisel verileriniz veri sorumlusu sıfatıyla aşağıdaki iletişim bilgileri üzerinden yönetilmektedir:</p>
+      <ul>
+        <li><strong>Uygulama Adı:</strong> Brideon</li>
+        <li><strong>Bundle ID:</strong> com.brideon.app</li>
+        <li><strong>E-posta:</strong> <a href="mailto:kvkk@brideon.app">kvkk@brideon.app</a></li>
+      </ul>
+    </section>
+
+    <section id="islenen-veriler">
+      <h2>2. İşlenen Kişisel Veriler</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Veri Kategorisi</th>
+            <th>Kişisel Veri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kimlik Verileri</strong></td>
+            <td>Ad, soyad</td>
+          </tr>
+          <tr>
+            <td><strong>İletişim Verileri</strong></td>
+            <td>E-posta adresi, telefon numarası (isteğe bağlı)</td>
+          </tr>
+          <tr>
+            <td><strong>Görsel Veriler</strong></td>
+            <td>Profil/avatar fotoğrafı, try-on için yüklenen vücut fotoğrafı, oluşturulan try-on sonuç görüntüleri</td>
+          </tr>
+          <tr>
+            <td><strong>Fiziksel Özellik Verileri</strong></td>
+            <td>Cinsiyet, beden tipi, boy, stil tercihi (kullanıcının tercihen girdiği)</td>
+          </tr>
+          <tr>
+            <td><strong>İşlem Verileri</strong></td>
+            <td>Try-on geçmişi, kredi bakiyesi, satın alma geçmişi</td>
+          </tr>
+          <tr>
+            <td><strong>Cihaz Verileri</strong></td>
+            <td>Cihaz kimliği (hoş geldin bonusu tekrarını önlemek amacıyla)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="info-box">
+        Fotoğraflarınız özel (private) bulut depolama alanında şifreli olarak saklanır. Yalnızca AI try-on işlemi için kullanılır ve reklam veya eğitim amacıyla üçüncü taraflarla paylaşılmaz.
+      </div>
+    </section>
+
+    <section id="isleme-amaci">
+      <h2>3. İşleme Amacı ve Hukuki Sebep</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Amaç</th>
+            <th>Hukuki Dayanak (KVKK m.5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kullanıcı hesabı oluşturma ve kimlik doğrulama</td>
+            <td>Sözleşmenin kurulması ve ifası (m.5/2-c)</td>
+          </tr>
+          <tr>
+            <td>AI try-on hizmetinin sunulması</td>
+            <td>Sözleşmenin kurulması ve ifası (m.5/2-c)</td>
+          </tr>
+          <tr>
+            <td>Kredi sistemi ve ödeme işlemlerinin yürütülmesi</td>
+            <td>Sözleşmenin kurulması ve ifası (m.5/2-c)</td>
+          </tr>
+          <tr>
+            <td>Kişiselleştirilmiş try-on sonucu üretimi (beden bilgileri)</td>
+            <td>Açık rıza (m.5/1)</td>
+          </tr>
+          <tr>
+            <td>Güvenlik, sahteciliği önleme (cihaz kimliği)</td>
+            <td>Meşru menfaat (m.5/2-f)</td>
+          </tr>
+          <tr>
+            <td>Yasal yükümlülüklerin yerine getirilmesi</td>
+            <td>Kanuni yükümlülük (m.5/2-ç)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="aktarim">
+      <h2>4. Verilerin Aktarıldığı Taraflar</h2>
+      <p>Kişisel verileriniz KVKK'nın 8. ve 9. maddeleri kapsamında aşağıdaki taraflarla paylaşılabilir:</p>
+      <ul>
+        <li><strong>Supabase Inc. (ABD):</strong> Kimlik doğrulama, veritabanı ve dosya depolama altyapısı sağlayıcısı. KVKK'nın 9. maddesi uyarınca yurt dışına aktarım, yeterli koruma sağlayan ülkelere veya açık rıza ile gerçekleştirilmektedir.</li>
+        <li><strong>FASHN.ai:</strong> Try-on görsel işleme hizmeti. Yalnızca işlem süresiyle sınırlı olarak fotoğraf verisi iletilir.</li>
+        <li><strong>RevenueCat Inc. (ABD):</strong> Uygulama içi satın alma yönetimi. Ödeme bilgilerinizi doğrudan Apple/Google ile yönetir; kart bilgileri Brideon'a iletilmez.</li>
+        <li><strong>Apple Inc. / Google LLC:</strong> Uygulama dağıtımı ve ödeme altyapısı.</li>
+        <li><strong>Yetkili Kamu Kurumları:</strong> Yasal yükümlülük kapsamında zorunlu hallerde.</li>
+      </ul>
+    </section>
+
+    <section id="toplama-yontemi">
+      <h2>5. Toplama Yöntemi</h2>
+      <p>Kişisel verileriniz aşağıdaki yöntemlerle toplanmaktadır:</p>
+      <ul>
+        <li>Uygulama kayıt formları ve profil düzenleme ekranları</li>
+        <li>Google OAuth ile giriş</li>
+        <li>Onboarding anketi (beden, boy, tercih bilgileri)</li>
+        <li>Galeri veya kamera aracılığıyla yüklenen fotoğraflar</li>
+        <li>Uygulama içi satın alma işlemleri</li>
+        <li>Otomatik olarak (cihaz kimliği)</li>
+      </ul>
+    </section>
+
+    <section id="saklama">
+      <h2>6. Saklama Süresi</h2>
+      <p>Kişisel verileriniz, işleme amacının ortadan kalkmasına kadar veya yasal saklama süreleri boyunca muhafaza edilir:</p>
+      <ul>
+        <li><strong>Hesap ve profil verileri:</strong> Hesap silinene kadar</li>
+        <li><strong>Try-on fotoğrafları ve sonuçları:</strong> Kullanıcı silene veya hesap silinene kadar</li>
+        <li><strong>Satın alma ve kredi geçmişi:</strong> İlgili mevzuat uyarınca 10 yıl (ticari kayıtlar)</li>
+        <li><strong>Cihaz kimliği:</strong> Hesap silinene kadar</li>
+      </ul>
+      <p>Saklama süreleri dolduğunda veriler güvenli biçimde silinir veya anonim hale getirilir.</p>
+    </section>
+
+    <section id="haklariniz">
+      <h2>7. İlgili Kişi Hakları</h2>
+      <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+        <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+        <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme</li>
+        <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+        <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme</li>
+        <li>Düzeltme ve silme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+        <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+        <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+      </ul>
+    </section>
+
+    <section id="basvuru">
+      <h2>8. Başvuru Yolu</h2>
+      <p>Yukarıda sayılan haklarınızı kullanmak için aşağıdaki kanallar üzerinden başvurabilirsiniz:</p>
+      <ul>
+        <li><strong>E-posta:</strong> <a href="mailto:kvkk@brideon.app">kvkk@brideon.app</a></li>
+        <li><strong>Genel iletişim:</strong> <a href="mailto:support@brideon.app">support@brideon.app</a></li>
+      </ul>
+      <p>Başvurunuzun tarafımıza ulaşmasından itibaren en geç <strong>30 gün</strong> içinde yanıt verilecektir. Talebin niteliğine göre bu süre uzatılabilir; uzatma durumunda gerekçesiyle birlikte tarafınıza bildirim yapılır.</p>
+      <div class="info-box">
+        Başvurunuzda; adınız, soyadınız, e-posta adresiniz ve talebinizin açık ifadesini belirtmeniz sürecin hızlanmasına yardımcı olacaktır.
+      </div>
+      <p>Kişisel Verileri Koruma Kurumu'na şikâyet hakkınız saklıdır: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Brideon. Tüm hakları saklıdır.</p>
+  <div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="privacy.html">Gizlilik Politikası</a>
+    <a href="terms.html">Kullanım Koşulları</a>
+  </div>
+</footer>
+
+</body>
+</html>

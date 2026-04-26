@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası — Brideon</title>
+  <meta name="description" content="Brideon uygulaması gizlilik politikası." />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cream: #FAF5EE; --warm-white: #FDF4EE;
+      --rose-gold: #C9847A; --rose-gold-light: #DFB0AA;
+      --dark-mocha: #2E1E18; --text-body: #374151; --text-muted: #9CA3AF;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--cream); color: var(--text-body); }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,245,238,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,132,122,0.15);
+      padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; text-decoration: none;
+      background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .nav-back {
+      font-size: 14px; font-weight: 500; color: var(--text-muted);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 8px; transition: all 0.2s;
+    }
+    .nav-back:hover { color: var(--rose-gold); background: rgba(201,132,122,0.08); }
+
+    .page-hero {
+      background: linear-gradient(160deg, #fff, var(--warm-white));
+      padding: 64px 24px 48px; text-align: center;
+      border-bottom: 1px solid rgba(201,132,122,0.1);
+    }
+    .page-tag {
+      display: inline-block;
+      background: rgba(201,132,122,0.1); color: var(--rose-gold);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; color: var(--dark-mocha); margin-bottom: 10px; }
+    .page-hero p { font-size: 15px; color: var(--text-muted); }
+
+    .content {
+      max-width: 760px; margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .toc {
+      background: #fff; border-radius: 16px;
+      border: 1px solid rgba(201,132,122,0.12);
+      padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h3 { font-size: 13px; font-weight: 700; color: var(--dark-mocha); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { font-size: 14px; color: var(--rose-gold); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    .prose section { margin-bottom: 48px; }
+    .prose h2 {
+      font-size: 22px; font-weight: 700; color: var(--dark-mocha);
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid rgba(201,132,122,0.15);
+      scroll-margin-top: 80px;
+    }
+    .prose h3 { font-size: 16px; font-weight: 700; color: var(--dark-mocha); margin: 20px 0 8px; }
+    .prose p { font-size: 15px; line-height: 1.75; color: var(--text-body); margin-bottom: 14px; }
+    .prose ul { padding-left: 20px; margin-bottom: 14px; }
+    .prose li { font-size: 15px; line-height: 1.75; color: var(--text-body); margin-bottom: 6px; }
+    .prose a { color: var(--rose-gold); }
+    .info-box {
+      background: rgba(201,132,122,0.07);
+      border-left: 3px solid var(--rose-gold);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px; margin: 20px 0;
+      font-size: 14px; color: var(--dark-mocha); line-height: 1.6;
+    }
+
+    footer {
+      background: #1C1410; padding: 32px 24px; text-align: center;
+    }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 8px; font-size: 13px; }
+    footer a:hover { color: #DFB0AA; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Brideon</a>
+  <a href="index.html" class="nav-back">← Ana Sayfa</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Yasal</span>
+  <h1>Gizlilik Politikası</h1>
+  <p>Son güncelleme: 26 Nisan 2024</p>
+</div>
+
+<div class="content">
+  <div class="toc">
+    <h3>İçindekiler</h3>
+    <ol>
+      <li><a href="#toplannan">Toplanan Veriler</a></li>
+      <li><a href="#kullanim">Verilerin Kullanımı</a></li>
+      <li><a href="#paylasim">Üçüncü Taraflarla Paylaşım</a></li>
+      <li><a href="#depolama">Veri Depolama ve Güvenlik</a></li>
+      <li><a href="#haklar">Kullanıcı Hakları</a></li>
+      <li><a href="#cookies">Çerezler ve Yerel Depolama</a></li>
+      <li><a href="#cocuklar">Çocukların Gizliliği</a></li>
+      <li><a href="#degisiklikler">Politika Değişiklikleri</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ol>
+  </div>
+
+  <div class="prose">
+    <section>
+      <p>Brideon ("uygulama", "biz", "bizim") olarak kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, Brideon mobil uygulamasını kullandığınızda hangi kişisel verileri topladığımızı, nasıl kullandığımızı ve koruduğumuzu açıklamaktadır.</p>
+      <p>Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayınız.</p>
+    </section>
+
+    <section id="toplannan">
+      <h2>1. Toplanan Veriler</h2>
+      <h3>1.1 Hesap Bilgileri</h3>
+      <p>Kayıt olduğunuzda aşağıdaki bilgileri toplarız:</p>
+      <ul>
+        <li>Ad soyad</li>
+        <li>E-posta adresi</li>
+        <li>Telefon numarası (isteğe bağlı, SMS doğrulama için)</li>
+        <li>Google hesabı bilgileri (Google ile giriş tercih edildiğinde)</li>
+      </ul>
+
+      <h3>1.2 Profil Bilgileri</h3>
+      <p>Kişiselleştirilmiş try-on deneyimi sunmak için aşağıdaki bilgileri saklayabiliriz:</p>
+      <ul>
+        <li>Cinsiyet ve etkinlik türü (düğün, nişan vb.)</li>
+        <li>Beden tipi ve boy</li>
+        <li>Stil tercihleri</li>
+        <li>Alt profil bilgileri (gelin, damat gibi birden fazla profil)</li>
+      </ul>
+
+      <h3>1.3 Fotoğraflar</h3>
+      <div class="info-box">Yüklediğiniz fotoğraflar yalnızca AI try-on işlemi için kullanılır ve şifreli Supabase Storage'da güvenle saklanır.</div>
+      <ul>
+        <li>Profil ve avatar fotoğrafları</li>
+        <li>Try-on için yüklenen vücut fotoğrafları</li>
+        <li>Oluşturulan try-on sonuç görselleri</li>
+      </ul>
+
+      <h3>1.4 Kullanım Verileri</h3>
+      <ul>
+        <li>Uygulamada gerçekleştirilen eylemler (try-on geçmişi)</li>
+        <li>Kredi işlemleri ve satın alma geçmişi</li>
+        <li>Cihaz kimliği (tekrarlanan hoş geldin bonusunu önlemek için)</li>
+      </ul>
+    </section>
+
+    <section id="kullanim">
+      <h2>2. Verilerin Kullanımı</h2>
+      <p>Topladığımız verileri şu amaçlarla kullanırız:</p>
+      <ul>
+        <li><strong>Hizmet sunumu:</strong> AI try-on işlemini gerçekleştirmek, sonuçları göstermek ve geçmişi saklamak</li>
+        <li><strong>Hesap yönetimi:</strong> Giriş, kayıt, şifre sıfırlama ve kimlik doğrulama işlemleri</li>
+        <li><strong>Kredi sistemi:</strong> Satın alma işlemlerini doğrulamak, kredi bakiyesini takip etmek</li>
+        <li><strong>Kişiselleştirme:</strong> Try-on kalitesini artırmak için beden ve stil bilgilerini kullanmak</li>
+        <li><strong>Güvenlik:</strong> Sahteciliği ve kötüye kullanımı önlemek</li>
+        <li><strong>Destek:</strong> Kullanıcı sorunlarını çözmeye yardımcı olmak</li>
+      </ul>
+      <p>Verilerinizi reklam amaçlı üçüncü taraflarla paylaşmıyoruz.</p>
+    </section>
+
+    <section id="paylasim">
+      <h2>3. Üçüncü Taraflarla Paylaşım</h2>
+      <p>Hizmetimizin çalışması için güvenilir üçüncü taraf sağlayıcılarla çalışıyoruz:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Kimlik doğrulama, veritabanı ve dosya depolama altyapısı. (<a href="https://supabase.com/privacy" target="_blank">Gizlilik politikası</a>)</li>
+        <li><strong>FASHN.ai:</strong> AI try-on görsel işleme hizmeti. Fotoğraflarınız yalnızca try-on sonucu üretmek için iletilir. (<a href="https://fashn.ai" target="_blank">fashn.ai</a>)</li>
+        <li><strong>RevenueCat:</strong> Uygulama içi satın alma yönetimi. (<a href="https://www.revenuecat.com/privacy" target="_blank">Gizlilik politikası</a>)</li>
+        <li><strong>Apple / Google:</strong> Uygulama dağıtımı ve ödeme altyapısı.</li>
+      </ul>
+      <p>Yasal zorunluluklar dışında (mahkeme kararı, resmi talep vb.) verilerinizi başka taraflarla paylaşmıyoruz.</p>
+    </section>
+
+    <section id="depolama">
+      <h2>4. Veri Depolama ve Güvenlik</h2>
+      <p>Tüm veriler Supabase altyapısında, aktarım sırasında TLS/SSL şifrelemesiyle korunarak saklanır. Veritabanı erişimi Row Level Security (RLS) politikalarıyla sınırlandırılmıştır; yalnızca kendi verilerinize erişebilirsiniz.</p>
+      <p>Fotoğraflarınız özel (private) depolama alanında saklanır ve yalnızca kısa süreli imzalı bağlantılarla erişilebilir.</p>
+      <p>Hesabınızı sildiğinizde verileriniz kalıcı olarak silinir.</p>
+    </section>
+
+    <section id="haklar">
+      <h2>5. Kullanıcı Hakları</h2>
+      <p>Aşağıdaki haklara sahipsiniz:</p>
+      <ul>
+        <li><strong>Erişim hakkı:</strong> Hakkınızda sakladığımız verileri talep edebilirsiniz.</li>
+        <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik bilgilerinizin düzeltilmesini isteyebilirsiniz.</li>
+        <li><strong>Silme hakkı:</strong> Hesabınızı ve tüm verilerinizi silebilir ya da silmemizi talep edebilirsiniz.</li>
+        <li><strong>Taşınabilirlik hakkı:</strong> Verilerinizin makine okunabilir formatta iletilmesini isteyebilirsiniz.</li>
+        <li><strong>İtiraz hakkı:</strong> Belirli veri işleme faaliyetlerine itiraz edebilirsiniz.</li>
+      </ul>
+      <p>Talepleriniz için: <a href="mailto:privacy@brideon.app">privacy@brideon.app</a></p>
+    </section>
+
+    <section id="cookies">
+      <h2>6. Çerezler ve Yerel Depolama</h2>
+      <p>Brideon bir mobil uygulamadır ve geleneksel tarayıcı çerezleri kullanmaz. Oturum bilgileri ve dil tercihi gibi veriler cihazınızdaki güvenli AsyncStorage alanında saklanır. Bu veriler yalnızca uygulama işlevselliği için kullanılır.</p>
+    </section>
+
+    <section id="cocuklar">
+      <h2>7. Çocukların Gizliliği</h2>
+      <p>Brideon 18 yaş ve üzeri kullanıcılara yöneliktir. 18 yaşından küçük kişilerden bilerek veri toplamıyoruz. Böyle bir durumdan haberdar olursak ilgili verileri derhal sileriz.</p>
+    </section>
+
+    <section id="degisiklikler">
+      <h2>8. Politika Değişiklikleri</h2>
+      <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içi bildirim veya e-posta yoluyla duyurulur. Güncel politika her zaman bu sayfada yayınlanır.</p>
+    </section>
+
+    <section id="iletisim">
+      <h2>9. İletişim</h2>
+      <p>Gizlilik politikamızla ilgili sorularınız için:</p>
+      <ul>
+        <li><strong>E-posta:</strong> <a href="mailto:privacy@brideon.app">privacy@brideon.app</a></li>
+        <li><strong>Genel destek:</strong> <a href="mailto:support@brideon.app">support@brideon.app</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Brideon. Tüm hakları saklıdır.</p>
+  <div>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="kvkk.html">KVKK</a>
+    <a href="terms.html">Kullanım Koşulları</a>
+  </div>
+</footer>
+
+</body>
+</html>
