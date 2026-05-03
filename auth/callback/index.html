@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>BrideOn</title>
+</head>
+<body>
+<script>
+  // Supabase'den gelen code veya token'ı brideon:// deep link'e aktar
+  var url = window.location.href;
+  var hash = window.location.hash;
+  var search = window.location.search;
+
+  var deepLink = 'brideon://auth/callback';
+  if (search) deepLink += search;
+  if (hash) deepLink += hash;
+
+  window.location.replace(deepLink);
+</script>
+</body>
+</html>
