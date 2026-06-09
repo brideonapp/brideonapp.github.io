@@ -5,25 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brideon — Sanal Gelinlik & Damatlık Deneme</title>
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Brideon — Sanal Gelinlik Deneme" />
   <meta property="og:description" content="Kendi fotoğrafına gelinlik ve damatlık giy. AI destekli sanal deneme uygulaması. Ücretsiz dene!" />
   <meta property="og:image" content="https://brideonapp.github.io/og-image.png" />
   <meta property="og:url" content="https://brideonapp.github.io/download" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Brideon" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Brideon — Sanal Gelinlik Deneme" />
   <meta name="twitter:description" content="Kendi fotoğrafına gelinlik ve damatlık giy. AI destekli sanal deneme uygulaması." />
   <meta name="twitter:image" content="https://brideonapp.github.io/og-image.png" />
-
-  <!-- Apple App Store Smart Banner -->
   <meta name="apple-itunes-app" content="app-id=6762142667" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 
-  <meta http-equiv="refresh" content="0; url=https://apps.apple.com/tr/app/brideon/id6762142667" />
-  <script>window.location.href = "https://apps.apple.com/tr/app/brideon/id6762142667";</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cream: #FAF5EE;
+      --rose-gold: #C9847A;
+      --rose-gold-light: #DFB0AA;
+      --rose-gold-dark: #B87068;
+      --dark-mocha: #2E1E18;
+      --text-muted: #9CA3AF;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #fff 0%, #FDF4EE 50%, var(--cream) 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 32px 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* decorative blobs */
+    body::before {
+      content: '';
+      position: absolute; top: -160px; right: -160px;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,132,122,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: absolute; bottom: -120px; left: -120px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(223,176,170,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(201,132,122,0.15);
+      border-radius: 32px;
+      padding: 52px 40px 44px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(46,30,24,0.10);
+      position: relative; z-index: 1;
+      animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .app-icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      overflow: hidden;
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 24px rgba(201,132,122,0.30);
+    }
+    .app-icon img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+    .logo {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 15px; color: var(--text-muted); line-height: 1.6;
+      margin-bottom: 36px; max-width: 280px; margin-left: auto; margin-right: auto;
+    }
+    .tagline strong { color: var(--dark-mocha); font-weight: 600; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(201,132,122,0.10); border: 1px solid rgba(201,132,122,0.20);
+      color: var(--rose-gold-dark); font-size: 11px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 32px;
+    }
+
+    .store-btn {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+      color: #fff; text-decoration: none;
+      padding: 16px 28px; border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(201,132,122,0.40);
+      transition: transform 0.18s, box-shadow 0.18s;
+      margin-bottom: 16px;
+    }
+    .store-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,132,122,0.50); }
+    .store-btn:active { transform: translateY(0); }
+
+    .store-btn svg { width: 26px; height: 26px; fill: #fff; flex-shrink: 0; }
+    .store-btn-text { text-align: left; }
+    .store-btn-text span { display: block; font-size: 11px; opacity: 0.85; font-weight: 500; }
+    .store-btn-text strong { display: block; font-size: 16px; font-weight: 800; }
+
+    .free-note {
+      font-size: 12px; color: var(--text-muted);
+    }
+    .free-note a {
+      color: var(--rose-gold); text-decoration: none; font-weight: 600;
+    }
+    .free-note a:hover { text-decoration: underline; }
+
+    .mockup {
+      margin-top: 40px;
+      width: 160px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 52px rgba(46,30,24,0.20);
+      position: relative; z-index: 1;
+      animation: fadeUp 0.7s 0.15s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    .mockup img { width: 100%; display: block; }
+  </style>
 </head>
-<body></body>
+<body>
+
+  <div class="card">
+    <div class="app-icon">
+      <img src="favicon.png" alt="Brideon" />
+    </div>
+
+    <div class="logo">Brideon</div>
+
+    <div class="badge">✨ AI Destekli Try-On</div>
+
+    <p class="tagline">
+      <strong>Gelinliğini sanal olarak dene,</strong><br>
+      kararını kolayca ver.
+    </p>
+
+    <a href="https://apps.apple.com/tr/app/brideon/id6762142667" target="_blank" rel="noopener" class="store-btn">
+      <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <div class="store-btn-text">
+        <span>Download on the</span>
+        <strong>App Store</strong>
+      </div>
+    </a>
+
+    <p class="free-note">Ücretsiz · <a href="https://brideonapp.github.io">Daha fazla bilgi</a></p>
+  </div>
+
+  <div class="mockup">
+    <img src="tryon-deneme.png" alt="Brideon Try-On" />
+  </div>
+
+</body>
 </html>
